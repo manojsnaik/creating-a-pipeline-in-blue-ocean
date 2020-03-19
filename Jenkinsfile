@@ -22,5 +22,12 @@ pipeline {
       }
     }
 
+    stage('input') {
+      steps {
+        input 'Proceed to continue'
+        sh './jenkins/scripts/kill.sh'
+      }
+    }
+
   }
 }
